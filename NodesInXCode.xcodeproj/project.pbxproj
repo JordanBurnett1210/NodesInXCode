@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		839D66631C99A44700677286 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839D66621C99A44700677286 /* main.m */; };
+		839D66781C99A51500677286 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D666A1C99A51500677286 /* NodeController.cpp */; };
+		839D66791C99A51500677286 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D666C1C99A51500677286 /* NodeRunner.cpp */; };
+		839D667A1C99A51500677286 /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D666E1C99A51500677286 /* ArrayNode.cpp */; };
+		839D667B1C99A51500677286 /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66701C99A51500677286 /* CTECArray.cpp */; };
+		839D667C1C99A51500677286 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66721C99A51500677286 /* CTECList.cpp */; };
+		839D667D1C99A51500677286 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66741C99A51500677286 /* Node.cpp */; };
+		839D667E1C99A51500677286 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66761C99A51500677286 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		839D665F1C99A44700677286 /* NodesInXCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NodesInXCode; sourceTree = BUILT_PRODUCTS_DIR; };
-		839D66621C99A44700677286 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		839D666A1C99A51500677286 /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
+		839D666B1C99A51500677286 /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
+		839D666C1C99A51500677286 /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeRunner.cpp; sourceTree = "<group>"; };
+		839D666E1C99A51500677286 /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
+		839D666F1C99A51500677286 /* ArrayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayNode.h; sourceTree = "<group>"; };
+		839D66701C99A51500677286 /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
+		839D66711C99A51500677286 /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		839D66721C99A51500677286 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		839D66731C99A51500677286 /* CTECList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		839D66741C99A51500677286 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		839D66751C99A51500677286 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		839D66761C99A51500677286 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		839D66771C99A51500677286 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,8 @@
 		839D66561C99A44700677286 = {
 			isa = PBXGroup;
 			children = (
+				839D66691C99A51500677286 /* Controller */,
+				839D666D1C99A51500677286 /* Model */,
 				839D66611C99A44700677286 /* NodesInXCode */,
 				839D66601C99A44700677286 /* Products */,
 			);
@@ -57,9 +77,35 @@
 		839D66611C99A44700677286 /* NodesInXCode */ = {
 			isa = PBXGroup;
 			children = (
-				839D66621C99A44700677286 /* main.m */,
 			);
 			path = NodesInXCode;
+			sourceTree = "<group>";
+		};
+		839D66691C99A51500677286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				839D666A1C99A51500677286 /* NodeController.cpp */,
+				839D666B1C99A51500677286 /* NodeController.h */,
+				839D666C1C99A51500677286 /* NodeRunner.cpp */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		839D666D1C99A51500677286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				839D666E1C99A51500677286 /* ArrayNode.cpp */,
+				839D666F1C99A51500677286 /* ArrayNode.h */,
+				839D66701C99A51500677286 /* CTECArray.cpp */,
+				839D66711C99A51500677286 /* CTECArray.h */,
+				839D66721C99A51500677286 /* CTECList.cpp */,
+				839D66731C99A51500677286 /* CTECList.h */,
+				839D66741C99A51500677286 /* Node.cpp */,
+				839D66751C99A51500677286 /* Node.h */,
+				839D66761C99A51500677286 /* Timer.cpp */,
+				839D66771C99A51500677286 /* Timer.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839D66631C99A44700677286 /* main.m in Sources */,
+				839D667D1C99A51500677286 /* Node.cpp in Sources */,
+				839D66781C99A51500677286 /* NodeController.cpp in Sources */,
+				839D667E1C99A51500677286 /* Timer.cpp in Sources */,
+				839D66791C99A51500677286 /* NodeRunner.cpp in Sources */,
+				839D667A1C99A51500677286 /* ArrayNode.cpp in Sources */,
+				839D667C1C99A51500677286 /* CTECList.cpp in Sources */,
+				839D667B1C99A51500677286 /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
