@@ -127,4 +127,37 @@ int CTECArray<Type> :: indexOf(Type searchValue)
     
 }
 
+template <class Type>
+int CTECArray<Type> :: nextIndexOf(int startingIndex, Type searchValue)
+{
+    assert(this->size > 0);
+    assert(startingIndex >= 0 && startingIndex < this->size);
+    
+    int indexOfValue = -1;
+    
+    ArrayNode<Type> * current = head;
+    
+    for(int index = 0; dex < startingIndex; index++)
+    {
+        current = current->getNext();
+    }
+    
+    for(int spot = startingIndex; spot < this->size; spot++)
+    {
+        if(current->getValue() == searchValue)
+        {
+            return spot;
+        }
+        else
+        {
+            current = current->getNext();
+        }
+        
+    }
+    
+    return indexOfValue;
+    
+
+}
+
 

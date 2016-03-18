@@ -212,3 +212,23 @@ Type CTECList<Type> :: getFront()
 
 }
 
+template <class Type>
+int CTECList<Type> :: indexOf(Type searchValue)
+{
+    assert(this->size > 0);
+    int index = -1;
+    ArrayNode<Type> * searchPointer = head;
+    
+    for(searchPointer = head; searchPointer->getNext() != nullptr; searchPointer = searchPointer->getNext)
+    {
+        index++;
+        if(searchValue == searchPointer->getValue())
+        {
+            return index;
+        }
+    }
+    index = -1;
+    
+    return index;
+}
+

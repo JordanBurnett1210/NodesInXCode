@@ -32,6 +32,7 @@ public:
 	Type removeFromIndex(int index);
 	int getSize();
 	void setSize();
+    int indexOf(Type searchValue);
 };
 
 #endif /* MODEL_CTECLIST_H_ */
