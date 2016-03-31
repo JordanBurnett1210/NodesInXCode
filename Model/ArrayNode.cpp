@@ -16,14 +16,14 @@ ArrayNode<Type>::ArrayNode() : Node<Type>()
 template<class Type>
 ArrayNode<Type>::ArrayNode(const Type& value) : Node<Type>(value)
 {
-	this->value->setValue(value);
+	this->setValue(value);
 	this->next = nullptr;
 }
 
 template<class Type>
 ArrayNode<Type>::ArrayNode(const Type& value, ArrayNode * next) : Node<Type>(value)
 {
-	this->value->setValue(value);
+	this->setValue(value);
 	this->next = next;
 }
 

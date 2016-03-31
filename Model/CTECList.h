@@ -18,6 +18,7 @@ private:
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
 	void calculateSize();
+    void swap(int indexOne, int indexTwo);
 public:
 	CTECList();
 	virtual ~CTECList();
@@ -33,6 +34,7 @@ public:
 	int getSize();
 	void setSize();
     int indexOf(Type searchValue);
+    void selectionSort();
 };
 
 #endif /* MODEL_CTECLIST_H_ */

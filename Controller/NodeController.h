@@ -15,20 +15,28 @@
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
 
-//////////////////////////////////////////////
-class NodeController						//
-{											//
-private:									//
-	CTECArray<int> * notHipsterInts;		//
-	Timer arrayTimer;						//
-	CTECList<int> * numbers;				//
-public:										//
-	NodeController();						//
-	virtual ~NodeController();				//
-	void testLists();
-
-	void start();							//
-};											//
-											//
-#endif /* CONTROLLER_NODECONTROLLER_H_ */	//
-//////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+class NodeController                                    //
+{                                                       //
+private:                                                //
+	CTECArray<int> * notHipsterInts;                    //
+	Timer arrayTimer;                                   //
+	CTECList<int> * numbers;                            //
+    void sortData();                                    //
+    void testList();                                    //
+    int * mergeData;                                    //
+    void searchTest();                                  //
+    void setupRandomArray();                            //
+    void doMergeSort();                                 //
+    void mergeSort(int dataArray [], int size);         //
+    void merge(int data [], int sizeOne, int sizeTwo);  //
+public:                                                 //
+    void checkSorts();                                  //
+	NodeController();                                   //
+	virtual ~NodeController();                          //
+	void testLists();                                   //
+	void start();                                       //
+};                                                      //
+                                                        //
+#endif /* CONTROLLER_NODECONTROLLER_H_ */               //
+//////////////////////////////////////////////////////////
