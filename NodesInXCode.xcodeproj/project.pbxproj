@@ -14,6 +14,8 @@
 		839D667C1C99A51500677286 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66721C99A51500677286 /* CTECList.cpp */; };
 		839D667D1C99A51500677286 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66741C99A51500677286 /* Node.cpp */; };
 		839D667E1C99A51500677286 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D66761C99A51500677286 /* Timer.cpp */; };
+		839E159A1CBBE774006DFA29 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839E15981CBBE774006DFA29 /* TreeNode.cpp */; };
+		839E159D1CBBF9E5006DFA29 /* BinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839E159B1CBBF9E5006DFA29 /* BinaryTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		839D66751C99A51500677286 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		839D66761C99A51500677286 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		839D66771C99A51500677286 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		839E15981CBBE774006DFA29 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		839E15991CBBE774006DFA29 /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
+		839E159B1CBBF9E5006DFA29 /* BinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTree.cpp; sourceTree = "<group>"; };
+		839E159C1CBBF9E5006DFA29 /* BinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,10 @@
 				839D66751C99A51500677286 /* Node.h */,
 				839D66761C99A51500677286 /* Timer.cpp */,
 				839D66771C99A51500677286 /* Timer.h */,
+				839E15981CBBE774006DFA29 /* TreeNode.cpp */,
+				839E15991CBBE774006DFA29 /* TreeNode.hpp */,
+				839E159B1CBBF9E5006DFA29 /* BinaryTree.cpp */,
+				839E159C1CBBF9E5006DFA29 /* BinaryTree.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +177,9 @@
 				839D667D1C99A51500677286 /* Node.cpp in Sources */,
 				839D66781C99A51500677286 /* NodeController.cpp in Sources */,
 				839D667E1C99A51500677286 /* Timer.cpp in Sources */,
+				839E159A1CBBE774006DFA29 /* TreeNode.cpp in Sources */,
 				839D66791C99A51500677286 /* NodeRunner.cpp in Sources */,
+				839E159D1CBBF9E5006DFA29 /* BinaryTree.cpp in Sources */,
 				839D667A1C99A51500677286 /* ArrayNode.cpp in Sources */,
 				839D667C1C99A51500677286 /* CTECList.cpp in Sources */,
 				839D667B1C99A51500677286 /* CTECArray.cpp in Sources */,
@@ -289,6 +301,7 @@
 				839D66681C99A44700677286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
