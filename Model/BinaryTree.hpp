@@ -17,6 +17,7 @@ class BinaryTree
 private:
     TreeNode<Type>* root;
     int height;
+    int size;
     bool balanced;
     bool contains(Type value, BinaryTree<Type>* currentTree);
 public:
@@ -25,9 +26,14 @@ public:
     bool insert(const Type& value);
     bool contains(Type value);
     Type remove(const Type& value);
-    int getHeit();
+    int getHeight();
     bool isBalanced();
     TreeNode<Type>* getRoot();
+    int getSize();
+    void calculateSize(TreeNode<Type> * currentNode);
+    void inorderTraversal(TreeNode<Type> * currentNode);
+    void postorderTraversal(TreeNode<Type> * currentNode);
+    void preorderTraversal(TreeNode<Type> * currentNode);
 };
 
 #endif /* BinaryTree_hpp */
