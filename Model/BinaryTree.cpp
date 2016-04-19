@@ -142,3 +142,53 @@ bool BinaryTree<Type> :: contains(Type value, BinaryTree<Type> * currentTree)
     }
     return false;
 }
+
+template <class Type>
+bool BinaryTree<Type> :: insert(const Type& value)
+{
+    TreeNode<Type> * insertedNode(value);
+    TreeNode<Type> * current;
+    TreeNode<Type> * trailingCurrent;
+    assert(insertedNode != nullptr);
+    
+    if(contains(value))
+    {
+        return false;
+    }
+    else
+    {
+        if(root == nullptr)
+        {
+            root = insertedNode;
+        }
+        else
+        {
+            current = root;
+            
+            while(current != nullptr)
+            {
+                trailingCurrent = current;
+                
+                if(current->getValue() > value)
+                {
+                    current = current->getLeftChild();
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+            if(trailingCurrent->getValue() > value)
+            {
+                trailingCurrent->setLeftChild(insertedNode);
+            }
+            else
+            {
+                trailingCurrent->setRightChild(insertedNode);
+            }
+            insertedNode->setParent(trailingCurrent);
+
+        }
+        return true;
+    }
+}
