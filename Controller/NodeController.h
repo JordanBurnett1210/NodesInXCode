@@ -14,6 +14,7 @@
 #include "../Model/CTECArray.cpp"
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
+#include "../Model/BinaryTree.cpp"
 
 //////////////////////////////////////////////////////////
 class NodeController                                    //
@@ -35,7 +36,7 @@ private:                                                //
     void quicksort(int first, int last);
     int partition(int first, int last);
     void doQuick();
-    
+    void tryTree();
     void mergeSort(int dataArray [], int size);         //
     void merge(int data [], int sizeOne, int sizeTwo);  //
 public:                                                 //

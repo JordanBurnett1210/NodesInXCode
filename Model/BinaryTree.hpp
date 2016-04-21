@@ -26,6 +26,7 @@ public:
     bool insert(const Type& value);
     bool contains(Type value);
     void remove(const Type& value);
+    void remove(TreeNode<Type> * nodeToRemove);
     int getHeight();
     bool isBalanced();
     TreeNode<Type>* getRoot();

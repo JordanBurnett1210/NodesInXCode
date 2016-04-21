@@ -20,6 +20,15 @@ BinaryTree<Type> :: BinaryTree()
 }
 
 template <class Type>
+BinaryTree<Type> :: ~BinaryTree()
+{
+    while(root != nullptr)
+    {
+        remove(root);
+    }
+}
+
+template <class Type>
 bool BinaryTree<Type> :: insert(const Type& value)
 {
     if(contains(value))
@@ -41,7 +50,7 @@ bool BinaryTree<Type> :: insert(const Type& value)
 }
 
 template <class Type>
-void BinaryTree<Type> :: insrt(const Type& value, BinaryTree<Type> * currentTree)
+void BinaryTree<Type> :: insert(const Type& value, BinaryTree<Type> * currentTree)
 {
     
 }
