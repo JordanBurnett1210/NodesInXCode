@@ -144,6 +144,37 @@ bool BinaryTree<Type> :: contains(Type value, BinaryTree<Type> * currentTree)
 }
 
 template <class Type>
+void BinaryTree<Type> :: remove(const Type& value)
+{
+    TreeNode<Type> * current = root;
+    TreeNode<Type> * trailing = current;
+    if(!contains(value))
+    {
+        return;
+    }
+    else
+    {
+        while(current != nullptr && current->getValue() != value)
+        {
+            trailing = current;
+            if(current->getValue() > value)
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        
+        if(current == root)
+        {
+            
+        }
+    }
+}
+
+template <class Type>
 bool BinaryTree<Type> :: insert(const Type& value)
 {
     TreeNode<Type> * insertedNode(value);

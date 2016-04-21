@@ -25,7 +25,7 @@ public:
     ~BinaryTree();
     bool insert(const Type& value);
     bool contains(Type value);
-    Type remove(const Type& value);
+    void remove(const Type& value);
     int getHeight();
     bool isBalanced();
     TreeNode<Type>* getRoot();

@@ -38,6 +38,7 @@ TreeNode<Type> :: TreeNode(const Type& value, TreeNode<Type>* parent) : Node<Typ
     this->setParent(parent);
 }
 
+
 template <class Type>
 void TreeNode<Type>:: setLeftChild(TreeNode<Type>* leftChild)
 {
@@ -57,14 +58,26 @@ void TreeNode<Type>:: setParent(TreeNode<Type>* parent)
 }
 
 template <class Type>
-TreeNode<Type> * TreeNode<Type> :: getLeftChild()
+TreeNode<Type> * TreeNode<Type> :: getLeftChild(BinaryTree<Type> * rightSubTree)
 {
+    TreeNode<Type> * leftNode = rightSubTree->getRoot();
+    while(leftNode->getLeftChild() != nullptr)
+    {
+        leftNode = leftNode->getLeftChild();
+    }
+    
     return this->leftChild;
 }
 
 template <class Type>
-TreeNode<Type> * TreeNode<Type> :: getRightChild()
+TreeNode<Type> * TreeNode<Type> :: getRightChild(BinaryTree<Type> * rightSubTree)
 {
+    TreeNode<Type> * rightNode = leftSubTree->getRoot();
+    while(leftNode->getLeftChild() != nullptr)
+    {
+        rightNode = rightNode->getRightChild();
+    }
+    
     return this->rightChild;
 }
 
