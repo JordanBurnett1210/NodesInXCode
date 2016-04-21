@@ -169,8 +169,70 @@ void BinaryTree<Type> :: remove(const Type& value)
         
         if(current == root)
         {
-            
+            remove(root);
         }
+        else if(trailing->getValue() > value)
+        {
+            remove(trailing->getLeftChild);
+        }
+        else
+        {
+            remove(trailing->getRightChild);
+        }
+    }
+}
+
+template <class Type>
+void BinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
+{
+    TreeNode<Type> * current;
+    TreeNode<Type> * trailing;
+    TreeNode<Type> * temp;
+    
+    if(nodeToRemove == nullptr)
+    {
+        cerr<< "It wasnt even there..." << endl;
+    }
+    else if(nodeToRemove->getRightChild() == nullptr && nodeToRemove->getLeftChild() == nullptr)
+    {
+        temp = nodeToRemove;
+        nodeToRemove = nullptr;
+        delete temp;
+    }
+    else if(nodeToRemove->getRightChild() == nullptr)
+    {
+        temp = nodeToRemove;
+        nodeToRemove = temp->getLeftChild();
+        delete temp;
+    }
+    else if(nodeToRemove->getLeftChild() == nullptr)
+    {
+        temp = nodeToRemove;
+        nodeToRemove = temp->getRightChild();
+        delete temp;
+    }
+    else
+    {
+        current = nodeToRemove->getLeftChild();
+        trailing = nullptr;
+        while(current->getRightChild != nullptr)
+        {
+            trailing = current;
+            current = current->getRightChild();
+        }
+        
+        nodeToRemove->setValue(current->getValue());
+        
+        if(trailing == nullptr)
+        {
+            nodeToRemove->setLeftChild(current->getLeftChild());
+        }
+        else
+        {
+            trailing->setRightChild(current->getLeftChild());
+        }
+        
+        delete current;
     }
 }
 
