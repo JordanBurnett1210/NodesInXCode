@@ -62,6 +62,10 @@ void NodeController::start()
 void NodeController::tryTree()
 {
     BinaryTree<int> testTree;
+    testTree.insert(7);
+    testTree.insert(10);
+    testTree.insert(-5);
+    testTree.insert(9)
 }
 
 void NodeController::testList()

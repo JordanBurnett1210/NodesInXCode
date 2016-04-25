@@ -111,15 +111,16 @@ void BinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
 template <class Type>
 bool BinaryTree<Type> :: contains(Type value)
 {
-    if(currentTree == nullptr)
+    bool isInTree= false;
+    if(root == nullptr)
     {
         return false;
     }
-    if(currentTree>getRoot()->getValue() == value)
+    if(root->getValue() == value)
     {
         return true;
     }
-    else if(value < currentTree->getRoot()->getValue())
+    else if(value < root->getValue())
     {
         return contains(value, root->getLeftChild());
     }
@@ -127,7 +128,7 @@ bool BinaryTree<Type> :: contains(Type value)
     {
         return contains(value, root->getRightChild());
     }
-    return false
+    return isInTree;
 }
 
 template <class Type>
