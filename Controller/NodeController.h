@@ -20,9 +20,9 @@
 class NodeController                                    //
 {                                                       //
 private:                                                //
-	CTECArray<int> * notHipsterInts;                    //
+	                   //
 	Timer arrayTimer;                                   //
-	CTECList<int> * numbers;                            //
+	                          //
     void sortData();                                    //
     void testList();                                    //
     int * mergeData;                                    //

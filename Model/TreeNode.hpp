@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include "Node.h"
-#include "BinaryTree.hpp"
 
 template <class Type>
 class TreeNode : public Node<Type>
@@ -27,8 +26,8 @@ public:
     void setLeftChild(TreeNode<Type>* leftChild);
     void setRightChild(TreeNode<Type>* rightChild);
     void setParent(TreeNode<Type>* parent);
-    TreeNode<Type> * getLeftChild(BinaryTree<Type> * rightSubTree);
-    TreeNode<Type> * getRightChild(BinaryTree<Type> * leftSubTree);
+    TreeNode<Type> * getLeftChild();
+    TreeNode<Type> * getRightChild();
     TreeNode<Type> * getParent();
 };
 

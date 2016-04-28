@@ -19,7 +19,7 @@ private:
     int height;
     int size;
     bool balanced;
-    bool contains(Type value, BinaryTree<Type>* currentTree);
+    bool contains(Type value, TreeNode<Type>* currentTree);
 public:
     BinaryTree();
     ~BinaryTree();

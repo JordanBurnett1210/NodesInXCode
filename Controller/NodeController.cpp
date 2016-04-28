@@ -9,8 +9,7 @@
 
 NodeController::NodeController()
 {
-	notHipsterInts = new CTECArray<int>(3);
-	numbers = new CTECList<int>();
+	
 }
 
 NodeController::~NodeController()
@@ -20,9 +19,7 @@ NodeController::~NodeController()
 
 void NodeController::testLists()
 {
-	numbers->addToFront(3);
-	numbers->addToEnd(8);
-	cout << "End should be 8 and is: " << numbers->getEnd() << endl;
+	
 }
 
 void NodeController::checkSorts()
@@ -35,7 +32,7 @@ void NodeController::checkSorts()
      */
     CTECArray<int> numbersInArray(5000);
     CTECList<int> numbersInList;
-    intcPlusPlusArray[5000];
+    int cPlusPlusArray[5000];
     for(int spot = 0; spot < 5000; spot++)
     {
         int randomValue = rand();
@@ -65,7 +62,7 @@ void NodeController::tryTree()
     testTree.insert(7);
     testTree.insert(10);
     testTree.insert(-5);
-    testTree.insert(9)
+    testTree.insert(9);
 }
 
 void NodeController::testList()
@@ -164,7 +161,7 @@ void NodeController::quicksort(int first, int last)
 {
     int pivotIndex;
     
-    if(size > 1)
+    if(first < last)
     {
         pivotIndex = partition(first, last);
         quicksort(first, pivotIndex-1);

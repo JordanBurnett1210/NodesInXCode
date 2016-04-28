@@ -29,33 +29,6 @@ BinaryTree<Type> :: ~BinaryTree()
 }
 
 template <class Type>
-bool BinaryTree<Type> :: insert(const Type& value)
-{
-    if(contains(value))
-    {
-        return false;
-    }
-    else
-    {
-        if(value < root->getValue())
-        {
-            insert(value, root->getLeftChild());
-        }
-        else
-        {
-            insert(value, root->getRightChild());
-        }
-        return true;
-    }
-}
-
-template <class Type>
-void BinaryTree<Type> :: insert(const Type& value, BinaryTree<Type> * currentTree)
-{
-    
-}
-
-template <class Type>
 void BinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
@@ -93,7 +66,9 @@ int BinaryTree<Type> :: getSize()
 {
     int currentSize = 0;
     
-    calculateSize(root);
+    currentSize = calculateSize(root);
+    
+    return currentSize;
 }
 
 template <class Type>
@@ -132,23 +107,23 @@ bool BinaryTree<Type> :: contains(Type value)
 }
 
 template <class Type>
-bool BinaryTree<Type> :: contains(Type value, BinaryTree<Type> * currentTree)
+bool BinaryTree<Type> :: contains(Type value, TreeNode<Type> * currentTree)
 {
     if(currentTree == nullptr)
     {
         return false;
     }
-    if(currentTree>getRoot()->getValue() == value)
+    if(currentTree->getValue() == value)
     {
         return true;
     }
-    else if(value < currentTree->getRoot()->getValue())
+    else if(value < currentTree->getValue())
     {
-        return contains(value, root->getLeftChild());
+        return contains(value, currentTree->getLeftChild());
     }
     else
     {
-        return contains(value, currentTree->etToot()->getRightChild());
+        return contains(value, currentTree->getRightChild());
     }
     return false;
 }
@@ -225,7 +200,7 @@ void BinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
     {
         current = nodeToRemove->getLeftChild();
         trailing = nullptr;
-        while(current->getRightChild != nullptr)
+        while(current->getRightChild() != nullptr)
         {
             trailing = current;
             current = current->getRightChild();
@@ -249,7 +224,7 @@ void BinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
 template <class Type>
 bool BinaryTree<Type> :: insert(const Type& value)
 {
-    TreeNode<Type> * insertedNode(value);
+    TreeNode<Type> * insertedNode= new TreeNode<Type>(value);
     TreeNode<Type> * current;
     TreeNode<Type> * trailingCurrent;
     assert(insertedNode != nullptr);

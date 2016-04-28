@@ -167,7 +167,7 @@ void CTECList<Type> :: calculateSize()
 			count++;
 
 		}
-		this->size == count;
+		this->size = count;
 		return;
 	}
 
@@ -236,8 +236,8 @@ template<class Type>
 void CTECList<Type> :: swap(int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    ArrayNode<Type> * first = getFromIndex(indexOne);
-    ArrayNode<Type> * second = getFromIndex(indexTwo);
+    ArrayNode<Type> * first ;
+    ArrayNode<Type> * second;
     ArrayNode<Type> * temp = new ArrayNode<Type>();
     
     temp->setValue(first->getValue());
@@ -251,7 +251,7 @@ template<class Type>
 void CTECList<Type> :: selectionSort()
 {
     int innerLoop, outerLoop;
-    for(outerLoop = 0; outerLoop < this->size() - 1; outerLoop++)
+    for(outerLoop = 0; outerLoop < size - 1; outerLoop++)
     {
         int selectedMinimum = outerLoop;
         for(innerLoop = outerLoop + 1; innerLoop < size; innerLoop++)
