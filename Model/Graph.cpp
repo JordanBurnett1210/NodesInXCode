@@ -8,10 +8,23 @@
 
 #include "Graph.hpp"
 #include "iostream"
+#include <Queue>
 using namespace std;
 
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
+
+template <class Type>
+Graph<Type>::Graph()
+{
+    this->manyVertices = 0;
+}
+
+template <class Type>
+Graph<Type>::~Graph()
+{
+    
+}
 
 template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
@@ -106,7 +119,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
     while(!vertexQueue.empty())
     {
         connections = currentGraph.neighbors(vertexQueue.front());
-        vertexQueue.pop()
+        vertexQueue.pop();
     }
     
 }

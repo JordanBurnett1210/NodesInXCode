@@ -6,6 +6,7 @@
  */
 
 #include "NodeController.h"
+#include "../Model/Graph.cpp"
 
 NodeController::NodeController()
 {
@@ -94,8 +95,6 @@ void NodeController::doMergeSort()
     mergeSort(mergeData, 5000);
     mergeTimer.stopTimer();
     mergeTimer.displayTimerInformation();
-    
-    
 }
 
 void NodeController::mergeSort(int data[], int size)
@@ -217,9 +216,19 @@ void NodeController::doQuick()
     mergeTimer.displayTimerInformation();
     
     delete [] mergeData;
+}
+
+void NodeController::tryGraphs()
+{
+    Graph<int> testerGraph;
+    testerGraph.addVertex(7);
+    testerGraph.addVertex(18);
+    testerGraph.addVertex(12);
+    testerGraph.addVertex(20);
+    testerGraph.addVertex(5);
+    testerGraph.addVertex(10);
+    testerGraph.addVertex(23);
     
-    
-    
-    
+    testerGraph.addEdge(7,18);
     
 }
