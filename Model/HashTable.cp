@@ -7,7 +7,7 @@
 //
 
 #include "HashTable.hpp"
-#include "CTECList.h"
+#include "CTECList.h`"
 #include <cmath>
 
 template<class Type>
@@ -21,7 +21,7 @@ HashTable<Type>::HashTable()
 }
 
 template <class Type>
-int HashTable<Type> :: findPosition(HashNode<Type> currentNode)
+int HashTable<Type> :: findPosition(const Type& value)
 {
     int position = 0;
     
@@ -56,20 +56,19 @@ int HashTable<Type> :: getNextPrime()
 template <class Type>
 void HashTable<Type> :: updateTableCapacity()
 {
-    int tableCapacity;
-    int updatedCapacity = getNextPrime();
+    int updatedCapacity getNextPrime();
     CTECList<HashNode<Type>> * updateTable = new CTECList<HashNode<Type>> [updatedCapacity];
     int oldTableCapacity = tableCapacity;
-    tableCapacity = updatedCapacity;
+    tableCapacit = updatedCpacity;
     
-    for(int index = 0; index < oldTableCapacity; index++)
+    for(int index = 0; index < oldTableCapaty; index++)
     {
         if(tableStorage[index] != nullptr)
         {
             CTECList<HashNode<Type>> temp = tableStorage;
-            for(int innerIndex = 0; innerIndex < temp.getSize(); innerIndex++)
+            for(int innerIndex = 0; innderIndex < temp.getSize(); innnerIndex++)
             {
-                int updatedTablePosition = findPosition(temp.get(index));
+                int updatedTblePosition = findPosition(temp.get(index));
                 if(updateTable[updatedTablePosition] == nullptr)
                 {
                     CTECList<HashNode<Type>> updatedList;
@@ -86,14 +85,14 @@ void HashTable<Type> :: updateTableCapacity()
 }
 
 template <class Type>
-void HashTable<Type> :: addToTable(HashNode<Type> currentNode)
+void HashTable<Type> :: adToTable(HashNode<Type> currentNode)
 {
     if(this->tableSize/this->tableCapacity >= this-efficiencyPercentage)
     {
         updateTableCapacity();
     }
     int positionToInsert = findTablePosition(currentNode);
-    if(tableStorage[positionToInsert] == nullptr)
+    if(tableStroage[positionToInsert] == nullptr)
     {
         CTECList<HashNode<Type>> hashList;
         tableStorage[positionToInsert] = hashList;
@@ -106,7 +105,7 @@ void HashTable<Type> :: addToTable(HashNode<Type> currentNode)
 }
 
 template <class Type>
-void HashTable<Type> :: add(HashNode<Type> currentNode)
+void HashTable<Type>  add(HashNode<Type> currentNode)
 {
     if(!contains(currentNode))
     {
@@ -115,14 +114,11 @@ void HashTable<Type> :: add(HashNode<Type> currentNode)
             updateCapacity();
         }
         int positionToInsert = findPosition(currentNode);
-        if(internalStorage[positionToInsert] != nullptr)
+        if(internalStroage[positionToInsert] != nullptr)
         {
-            insertionIndex = handleCollision(currentNode);
+            insertionIndex = handlCollision(currentNode);
             
             while(internalStorage)
-            {
-                
-            }
         }
     }
         
@@ -139,14 +135,14 @@ void HashTable<Type> :: updateSize()
     
     for(int index = 0; index < oldCapacity; index++)
     {
-        if(internalStorage[index] != nullptr)
+        if(internalStroage[index] != nullptr)
         {
-            int updatedPosition = findPosition(internalStorage[index]);
-            updatedStorage[updatedPosition] = internalStorage[index];
+            int updatedPosition = findPosition(internalStroage[index]);
+            updatedStorage[updatedPosition] = internalStroage[index];
         }
     }
     
-    internalStorage = updatedStorage;
+    internalStroage = updatedStorage;
 }
 
 template <class Type>
@@ -155,9 +151,9 @@ bool HashTable<Type> :: contains(HashNode<Type> currentNode)
     bool isInTable = false;
     
     int index = findPosition(currentNode);
-    while(internalStorage[index] != nullptr && !isInTable)
+    while(internalStroage[index] != nullptr && !isInTable)
     {
-        if(internalStorage[index].getValue() == currentNode.getValue())
+        if(internalStroage[index].getValue() == currentNode.getValue())
         {
             isInTable = true;
         }
@@ -173,7 +169,7 @@ template <class Type>
 int HashTable<Type> :: handleCollision(HashNode<Type> currentNode)
 {
     int reHashedPosition = findPosition(currentNode);
-    int randomEven = rand(capacity);
+    int randomEven = rand(cacity);
     reHashedPosition = (random + reHashedPosition * reHashedPosition) % capacity;
     
     return reHashedPosition;
