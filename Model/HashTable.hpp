@@ -9,6 +9,18 @@
 #ifndef HashTable_hpp
 #define HashTable_hpp
 
-#include <stdio.h>
+#include "HashNode.cpp"
+
+template <class Type>
+class HashTable
+{
+private:
+    int capacity;
+    double efficiencyPercentage;
+    int size;
+    HashNode<Type> ** internalStroage;
+    int findPosition(HashNode<Type> currentNode);
+    
+};
 
 #endif /* HashTable_hpp */

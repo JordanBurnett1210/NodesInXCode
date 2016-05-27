@@ -22,7 +22,7 @@ void HashNode<Type> :: setKey(int key)
 }
 
 template <class Type>
-void HashNode<Type> :: setValue(const Type& value)
+void HashNode<Type> :: setValue(const Type& value )
 {
     this->value = value;
 }
