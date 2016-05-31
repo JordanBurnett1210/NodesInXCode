@@ -108,6 +108,7 @@ void HashTable<Type> :: addToTable(HashNode<Type> currentNode)
 template <class Type>
 void HashTable<Type> :: add(HashNode<Type> currentNode)
 {
+    int insertionIndex;
     if(!contains(currentNode))
     {
         if(this->size/this->capacity >= this-> efficiencyPercentage)
@@ -174,7 +175,7 @@ int HashTable<Type> :: handleCollision(HashNode<Type> currentNode)
 {
     int reHashedPosition = findPosition(currentNode);
     int randomEven = rand(capacity);
-    reHashedPosition = (random + reHashedPosition * reHashedPosition) % capacity;
+    reHashedPosition = (randomEven + reHashedPosition * reHashedPosition) % capacity;
     
     return reHashedPosition;
 }

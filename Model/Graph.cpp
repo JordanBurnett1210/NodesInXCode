@@ -76,7 +76,16 @@ Type& Graph<Type> :: operator[](int vertex)
 template <class Type>
 std::set<int>  Graph<Type> :: neighbors(int vertex) const
 {
-    
+    std::set<int> answer;
+    assert(vertex < size());
+    for(int index = 0; index < size(); index++)
+    {
+        if(edges [vertex][index])
+        {
+            answer.insert(index);
+        }
+    }
+    return answer;
 }
 
 template <class Type>
@@ -112,7 +121,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
     std::queue<int> vertexQueue;
     assert(vertex < currentGraph.size());
     
-    std::fill_n(markedVertices, currentGraph.si(), false);
+    std::fill_n(markedVertices, currentGraph.size(), false);
     markedVertices[vertex] = true;
     cout << currentGraph[vertex] << endl;
     vertexQueue.push(vertex);
