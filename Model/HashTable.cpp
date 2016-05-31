@@ -16,7 +16,7 @@ HashTable<Type>::HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->internalStroage = new HashNode<Type>[capacity];
+    this->internalStorage = new HashNode<Type>[capacity];
     this->tableStorage = new CTECList<HashNode <Type>>[capacity];
 }
 

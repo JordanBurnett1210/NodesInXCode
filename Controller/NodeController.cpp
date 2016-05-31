@@ -261,7 +261,7 @@ void NodeController::tryHash()
         hash.add(temp);
         tempArray[spot] = temp;
     }
-    bool test = hash.contains(tempArray[0];
+    bool test = hash.contains(tempArray[0]);
     string result;
     if(test)
     {
@@ -270,6 +270,66 @@ void NodeController::tryHash()
     else
     {
         result = "It's not there";
+    }
+    bool test1 = hash.contains(tempArray[1]);
+    string result1;
+    if(test1)
+    {
+        result1 = "It's there";
+    }
+    else
+    {
+        result1 = "It's not there";
+    }
+    bool test2 = hash.contains(tempArray[2]);
+    string result2;
+    if(test2)
+    {
+        result2 = "It's there";
+    }
+    else
+    {
+        result2 = "It's not there";
+    }
+    bool test3 = hash.contains(tempArray[3]);
+    string result3;
+    if(test3)
+    {
+        result3 = "It's there";
+    }
+    else
+    {
+        result3 = "It's not there";
+    }
+    bool test4 = hash.contains(tempArray[10]);
+    string result4;
+    if(test4)
+    {
+        result4 = "It's there";
+    }
+    else
+    {
+        result4 = "It's not there";
+    }
+    bool test5 = hash.contains(tempArray[11]);
+    string result5;
+    if(test5)
+    {
+        result5 = "It's there";
+    }
+    else
+    {
+        result5 = "It's not there";
+    }
+    bool test6 = hash.contains(tempArray[12]);
+    string result6;
+    if(test6)
+    {
+        result6 = "It's there";
+    }
+    else
+    {
+        result6 = "It's not there";
     }
     
     
