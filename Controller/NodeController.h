@@ -46,6 +46,7 @@ public:                                                 //
 	void testLists();                                   //
 	void start();                                       //
     void tryGraphs();                                   //
+    void tryHash();                                     //
 };                                                      //
                                                         //
 #endif /* CONTROLLER_NODECONTROLLER_H_ */               //

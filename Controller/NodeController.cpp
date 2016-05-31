@@ -7,6 +7,8 @@
 
 #include "NodeController.h"
 #include "../Model/Graph.cpp"
+#include "../Model/HashTable.cpp"
+#include "../Model/HashNode.cpp"
 
 NodeController::NodeController()
 {
@@ -55,6 +57,8 @@ void NodeController::checkSorts()
 void NodeController::start()
 {
     tryTree();
+    tryGraphs();
+    tryHash();
 }
 
 void NodeController::tryTree()
@@ -242,5 +246,31 @@ void NodeController::tryGraphs()
     
     testerGraph.depthFirstTraversal(testerGraph, 7);
     testerGraph.breadthFirstTraversal(testerGraph, 7);
+    
+}
+
+void NodeController::tryHash()
+{
+    HashTable<int> hash;
+    HashNode<int>tempArray[10];
+    for(int spot = 0; spot < 10; spot ++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int>temp = HashNode<int>(randomKey, randomValue);
+        hash.add(temp);
+        tempArray[spot] = temp;
+    }
+    bool test = hash.contains(tempArray[0];
+    string result;
+    if(test)
+    {
+        result = "It's there";
+    }
+    else
+    {
+        result = "It's not there";
+    }
+    
     
 }
