@@ -67,7 +67,14 @@ void NodeController::tryTree()
     testTree.insert(7);
     testTree.insert(10);
     testTree.insert(-5);
+    testTree.getSize();
     testTree.insert(9);
+    testTree.getSize();
+    testTree.insert(-3);
+    testTree.insert(-8);
+    testTree.insert(15);
+    testTree.remove(-3);
+    testTree.getSize();
 }
 
 void NodeController::testList()
